@@ -152,14 +152,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/animations@npm:^13.3.2":
-  version: 13.3.2
-  resolution: "@angular/animations@npm:13.3.2"
-  dependencies:
-    tslib: ^2.3.0
+"@angular/animations@npm:~9.1.9":
+  version: 9.1.13
+  resolution: "@angular/animations@npm:9.1.13"
   peerDependencies:
-    "@angular/core": 13.3.2
-  checksum: 72310dcc128ec66e77d84f0a7f98dd4addb49c0fac98bd8273b4a470281d258857f6059c318f906e5b9f109380fd4c84668a1e0030a37cda84107aac9c34d9a3
+    "@angular/core": 9.1.13
+    tslib: ^1.10.0
+  checksum: 6cc86f6bbf5833ae0655b32f5a7612a219e015caf5f0694264f840c578140de024e3f26bdaadbc7677a6369b87b93045f31d95c2fa0111401efdb2b7eb9a1ddb
   languageName: node
   linkType: hard
 
@@ -4685,7 +4684,7 @@ __metadata:
   resolution: "frontend@workspace:."
   dependencies:
     "@angular-devkit/build-angular": ~0.901.7
-    "@angular/animations": ^13.3.2
+    "@angular/animations": ~9.1.9
     "@angular/cdk": ^9.2.4
     "@angular/cli": ~9.1.7
     "@angular/common": ~9.1.9
@@ -10331,13 +10330,6 @@ __metadata:
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.3.0":
-  version: 2.3.1
-  resolution: "tslib@npm:2.3.1"
-  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 
