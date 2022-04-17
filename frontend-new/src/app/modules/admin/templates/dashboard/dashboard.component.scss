@@ -3,22 +3,41 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+
+  app-menu {
+    transform: translateX(-30rem);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.d-flex{
+  transform: translateX(0) !important;
 }
 
 .content {
   display: grid;
   height: calc(100% - 11.2rem);
+  grid-template-columns: 0 1fr;
+  transition: all 200ms ease-in-out;
+
+  @media (min-width: 768px){
+    grid-template-columns: 0 2fr;
+  }
+
+  @media (min-width: 1024px){
+    grid-template-columns: 0 2fr;
+  }
+}
+
+.toggleCollumn {
   grid-template-columns: 1fr;
+  transition: all 200ms ease-in-out;
 
-  // @media (min-width: 768px){
-  //   grid-template-columns: 1fr;
-  // }
+  @media (min-width: 768px){
+    grid-template-columns: 30rem 2fr;
+  }
 
-  // @media (min-width: 1024px){
-  //   grid-template-columns: 1fr 2fr;
-  // }
-
-  // @media (min-width: 1200px){
-
-  // }
+  @media (min-width: 1024px){
+    grid-template-columns: 30rem 2fr;
+  }
 }

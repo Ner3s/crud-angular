@@ -1,6 +1,6 @@
-<mat-toolbar>
-  <button mat-icon-button aria-label="Icon-button with menu icon">
+<mat-toolbar class="header">
+  <button mat-icon-button aria-label="Icon-button with menu icon" (click)="handleToggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Dashboard</span>
+  <span>{{title}}</span>
 </mat-toolbar>

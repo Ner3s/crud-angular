@@ -1,7 +1,14 @@
 <div class="container">
   <app-header></app-header>
-  <section class="content">
-    <app-menu></app-menu>
+  <section
+    class="content"
+    [ngClass]="{
+      'toggleCollumn': menuToggle
+    }"
+  >
+    <app-menu [ngClass]="{
+      'd-flex': menuToggle
+    }"></app-menu>
     <main>
       <router-outlet></router-outlet>
     </main>

@@ -1,7 +1,10 @@
-<aside class="menu-container" >
-  <nav>
+<aside>
+  <nav class="menu-container">
     <ul>
-      <li>teste</li>
+      <li *ngFor="let menuItem of menu;" class="item-link" [routerLink]="menuItem.link" routerLinkActive="active-link">
+        <mat-icon>{{menuItem.icon}}</mat-icon>
+        <span>{{menuItem.label}}</span>
+      </li>
     </ul>
   </nav>
 </aside>
