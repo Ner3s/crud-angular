@@ -7,11 +7,11 @@ aside {
   background-color: #fff;
   overflow: hidden;
 
-  &::after {
-    content: " ";
-    width: 0.3rem;
-    background-color: $primary;
-  }
+  // &::after {
+  //   content: " ";
+  //   width: 0.3rem;
+  //   background-color: $primary;
+  // }
 }
 
 .menu-container {
@@ -29,13 +29,17 @@ aside {
 }
 
 .link {
-  width: 25rem;
+  width: 90%;
   display: flex;
   align-items: center;
   cursor: pointer;
   color: $primary;
   border-radius: 1rem 0 0 1rem;
   padding: 0 0 0 1.5rem;
+
+  @media (min-width: 768px){
+    width: 25rem;
+  }
 
   span {
     padding-left: 1.5rem;
