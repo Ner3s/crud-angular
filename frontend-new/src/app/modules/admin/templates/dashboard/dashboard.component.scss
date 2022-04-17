@@ -1,4 +1,7 @@
+@import '../../../../shared/styles/variables.scss';
+
 .container {
+  background-color: $light_grey;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -41,3 +44,4 @@
     grid-template-columns: 30rem 2fr;
   }
 }
+

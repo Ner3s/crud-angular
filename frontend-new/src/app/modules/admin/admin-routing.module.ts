@@ -16,7 +16,7 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'product',
+        path: 'products',
         component: ProductReadComponent,
       }
     ]
