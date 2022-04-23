@@ -11,12 +11,11 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  getAll({ _page, _limit, name }: TProductParams): Observable<Product[]> {
+  getAll(data?: TProductParams): Observable<Product[]> {
     return this.http.get<Product[]>(`${environment.api}/products`, {
       params: {
-        name,
-        _page: _page ?? 1,
-        _limit: _limit ?? 8
+        _page: data?._page ?? 1,
+        _limit: data?._limit ?? 10,
       }
     });
   }

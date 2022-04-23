@@ -1,4 +1,4 @@
 export type TCommonParams = {
-  _page: number,
-  _limit: number,
+  _page?: number,
+  _limit?: number,
 }
