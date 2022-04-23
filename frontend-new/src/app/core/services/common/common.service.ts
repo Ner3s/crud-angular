@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -7,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CommonService {
 
-  constructor() {
+  constructor(private snackBar: MatSnackBar) {
   }
 
   private getLocalStorageMenuToggle = Boolean(localStorage.getItem(`${environment.appPrefix}:menu`) === 'true');
@@ -31,4 +32,11 @@ export class CommonService {
     this._menuTitle.next(data);
   }
 
+  showMessage(msg: string): void {
+    this.snackBar.open(msg, 'X', {
+      duration: 3000,
+      horizontalPosition: "right",
+      verticalPosition: "top"
+    });
+  }
 }
