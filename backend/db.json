@@ -2,15 +2,57 @@
   "products": [
     {
       "id": 1,
-      "name": "Caneta BIC Azul",
-      "description": "caneta azul, azul caneta.",
-      "price": 2.55
+      "name": "Celular",
+      "description": "Teste",
+      "price": 3000
     },
     {
       "id": 2,
       "name": "Notebook Mac Pro",
       "description": "MacBook Pro 256GB 8GB i5",
       "price": 9000
+    },
+    {
+      "id": 3,
+      "name": "Iphone X",
+      "description": "Celular",
+      "price": 9000
+    },
+    {
+      "id": 4,
+      "name": "Iphone SE",
+      "description": "Celular",
+      "price": 3500
+    },
+    {
+      "id": 5,
+      "name": "Android",
+      "description": "Celular",
+      "price": 3500
+    },
+    {
+      "id": 6,
+      "name": "Xiaomi Poco",
+      "description": "Celular",
+      "price": 2500
+    },
+    {
+      "id": 7,
+      "name": "Notebook Asus",
+      "description": "Computador",
+      "price": 2500
+    },
+    {
+      "id": 8,
+      "name": "Notebook Accer",
+      "description": "Computador",
+      "price": 2500
+    },
+    {
+      "id": 9,
+      "name": "Celta 4 portas",
+      "description": "Carro",
+      "price": 2500
     }
   ]
 }
