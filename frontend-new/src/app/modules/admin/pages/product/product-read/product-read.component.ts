@@ -17,6 +17,11 @@ interface IDialogDelete {
   id: string | number;
 }
 
+/**
+ * @Todo
+ * Criar regra para quando não conseguir buscar produtos.
+ */
+
 @Component({
   selector: 'app-product-read',
   templateUrl: './product-read.component.html',

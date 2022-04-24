@@ -5,3 +5,5 @@
 *.pnp.cjs
 *.pnp.loader.mjs
 *.angular
+frontend/.angular
+frontend-new/.angular
