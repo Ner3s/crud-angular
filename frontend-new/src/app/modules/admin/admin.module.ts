@@ -17,18 +17,15 @@ import { DashboardComponent } from './templates/dashboard/dashboard.component';
 import { ProductReadComponent } from './pages/product/product-read/product-read.component';
 import { ProductCreateComponent } from './pages/product/product-create/product-create.component';
 import { ProductUpdateComponent } from './pages/product/product-update/product-update.component';
-import { ProductDeleteComponent } from './pages/product/product-delete/product-delete.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
-
 
 @NgModule({
   declarations: [
     ProductReadComponent,
     ProductCreateComponent,
     ProductUpdateComponent,
-    ProductDeleteComponent,
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
