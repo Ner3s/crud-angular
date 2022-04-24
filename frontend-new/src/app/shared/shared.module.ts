@@ -6,10 +6,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
 
 //  Commons
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ModalConfirmComponent } from './components/modal-confirm/modal-confirm.component';
 
 const MaterialModules = [
   MatToolbarModule,
@@ -18,17 +23,18 @@ const MaterialModules = [
   MatCardModule,
   MatButtonModule,
   MatSnackBarModule,
-  MatIconModule
-]
+  MatIconModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatDialogModule,
+];
 
 @NgModule({
-  declarations: [ ],
-  imports: [
-    CommonModule,
-    ...MaterialModules
+  declarations: [
+    ModalConfirmComponent
   ],
-  exports: [
-    ...MaterialModules
-  ]
+  imports: [CommonModule, ...MaterialModules],
+  exports: [...MaterialModules, ModalConfirmComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
