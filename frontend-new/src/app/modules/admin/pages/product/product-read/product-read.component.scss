@@ -19,4 +19,34 @@
 
 .btn-n-product {
   background-color: $primary;
+  color: #fff;
+}
+
+.margin-y {
+  margin: 1.5rem 0;
+}
+
+.table {
+  width: 100%;
+
+  th {
+    color: $primary;
+  }
+}
+
+.txt-right {
+  text-align: right;
+  cursor: pointer;
+
+  .edit {
+    color: $primary;
+  }
+  .delete {
+    color: red;
+  }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
 }

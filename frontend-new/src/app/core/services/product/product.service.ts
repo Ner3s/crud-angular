@@ -12,11 +12,14 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getAll(data?: TProductParams): Observable<Product[]> {
+    const params = {
+      _page: data?._page ?? 1,
+      _limit: data?._limit ?? 8,
+      ...(data?.name && { name: data.name })
+    }
+
     return this.http.get<Product[]>(`${environment.api}/products`, {
-      params: {
-        _page: data?._page ?? 1,
-        _limit: data?._limit ?? 10,
-      }
+      params,
     });
   }
 
@@ -28,7 +31,7 @@ export class ProductService {
     return this.http.put<Product>(`${environment.api}/products/${product.id}`, product);
   }
 
-  delete(id: number): Observable<void> {
+  delete(id: number | string): Observable<void> {
     return this.http.delete<void>(`${environment.api}/products/${id}`);
   }
 

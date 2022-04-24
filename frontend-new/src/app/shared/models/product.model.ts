@@ -8,5 +8,5 @@ export interface Product {
 }
 
 export type TProductParams = TCommonParams & {
-  name: string;
+  name?: string;
 }
