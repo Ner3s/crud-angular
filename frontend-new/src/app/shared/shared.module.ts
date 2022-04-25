@@ -10,11 +10,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 //  Commons
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
 import { ModalConfirmComponent } from './components/modal-confirm/modal-confirm.component';
+import { FormFieldComponent } from './components/form-field/form-field.component';
+import { FormErrorMsgComponent } from './components/form-error-msg/form-error-msg.component';
+import { FormFieldCommonComponent } from './components/form-field-common/form-field-common.component';
 
 const MaterialModules = [
   MatToolbarModule,
@@ -28,13 +34,19 @@ const MaterialModules = [
   MatPaginatorModule,
   MatProgressSpinnerModule,
   MatDialogModule,
+  MatInputModule,
+];
+
+const ComponentsShared = [
+  ModalConfirmComponent,
+  FormFieldComponent,
+  FormFieldCommonComponent,
+  FormErrorMsgComponent,
 ];
 
 @NgModule({
-  declarations: [
-    ModalConfirmComponent
-  ],
-  imports: [CommonModule, ...MaterialModules],
-  exports: [...MaterialModules, ModalConfirmComponent],
+  declarations: [...ComponentsShared],
+  imports: [CommonModule, FormsModule, ...MaterialModules],
+  exports: [...MaterialModules, ...ComponentsShared, FormsModule],
 })
 export class SharedModule {}

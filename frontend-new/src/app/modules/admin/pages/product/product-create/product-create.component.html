@@ -1,0 +1,13 @@
+<mat-card>
+  <h2>Criar produto</h2>
+  <hr />
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <app-form-field
+      label="Nome"
+      formControlName="name"
+      [control]="form.controls['name']"
+    ></app-form-field>
+
+    <!-- <app-form-field-common label="Nome" name="name" formControlName="name" [control]="form.controls['name']"></app-form-field-common> -->
+  </form>
+</mat-card>

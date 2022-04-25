@@ -1,0 +1,10 @@
+@import '../../../../../shared/styles/variables.scss';
+
+h2 {
+  color: $primary;
+  margin: 1.2rem 0;
+}
+
+hr {
+  border: 1px solid $primary;
+}

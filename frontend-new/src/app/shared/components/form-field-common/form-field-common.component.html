@@ -1,0 +1,11 @@
+<ng-container >
+  <input
+  [type]="type"
+  [id]="id"
+  [name]="name"
+  [placeholder]="placeholder"
+  [readonly]="!!isReadOnly"
+  [(ngModel)]="value"
+  />
+  <app-form-error-msg [label]="label ? label : 'Este campo'" [control]="control"></app-form-error-msg>
+</ng-container>

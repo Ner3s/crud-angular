@@ -11,16 +11,7 @@ import {
   IModalConfirmData,
   ModalConfirmComponent,
 } from 'src/app/shared/components/modal-confirm/modal-confirm.component';
-
-interface IDialogDelete {
-  description: string;
-  id: string | number;
-}
-
-/**
- * @Todo
- * Criar regra para quando não conseguir buscar produtos.
- */
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-read',
@@ -41,7 +32,8 @@ export class ProductReadComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private commonService: CommonService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public router: Router
   ) {}
 
   ngOnInit(): void {
@@ -59,6 +51,7 @@ export class ProductReadComponent implements OnInit {
         this.commonService.showMessage(
           'Oops, não foi possível buscar os produtos!'
         );
+        this.isLoading = false;
       },
       complete: () => {
         this.isLoading = false;
@@ -79,6 +72,7 @@ export class ProductReadComponent implements OnInit {
         this.commonService.showMessage(
           'Oops, não foi possível deletar o produto!'
         );
+        this.isLoading = false;
       },
       complete: () => {
         this.isLoading = false;
@@ -107,5 +101,9 @@ export class ProductReadComponent implements OnInit {
     const dialogRef = this.dialog.open(ModalConfirmComponent, {
       data: dataDialog,
     });
+  }
+
+  handleNewProduct(){
+    this.router.navigate(['/products/create'])
   }
 }
