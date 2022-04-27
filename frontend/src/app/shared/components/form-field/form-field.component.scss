@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+
+.full-width {
+  width: 100%;
+}
+
+.error {
+  margin-bottom: 1.6rem;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding: 0 0 0.2rem 0 !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: $primary !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: $primary !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: $primary !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: $primary !important;
+}
