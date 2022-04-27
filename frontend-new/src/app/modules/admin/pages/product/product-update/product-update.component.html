@@ -1,1 +1,35 @@
-<p>product-update works!</p>
+<mat-card>
+  <h2>Atualizar produto</h2>
+  <hr />
+  <div *ngIf="isLoading" class="d-flex-center">
+    <mat-spinner></mat-spinner>
+  </div>
+  <form *ngIf="!isLoading" [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+    <app-form-field
+      appearance="outline"
+      label="Nome"
+      formControlName="name"
+      [control]="form.controls['name']"
+    ></app-form-field>
+
+    <app-form-field
+      appearance="outline"
+      label="Descrição"
+      formControlName="description"
+      [control]="form.controls['description']"
+      type="textarea"
+    ></app-form-field>
+
+    <app-form-field
+      appearance="outline"
+      label="Preço"
+      type="number"
+      formControlName="price"
+      [control]="form.controls['price']"
+    ></app-form-field>
+    <section>
+      <button type="button" mat-flat-button class="btn-back" (click)="handleBackPage()">Voltar</button>
+      <button type="submit" mat-flat-button [disabled]="form.invalid" class="btn-create">Salvar</button>
+    </section>
+  </form>
+</mat-card>

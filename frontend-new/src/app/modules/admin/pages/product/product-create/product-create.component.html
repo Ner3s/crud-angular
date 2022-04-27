@@ -1,8 +1,7 @@
 <mat-card>
   <h2>Criar produto</h2>
   <hr />
-  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
-
+  <form *ngIf="!isLoading" [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
     <app-form-field
       appearance="outline"
       label="Nome"
@@ -14,7 +13,7 @@
       appearance="outline"
       label="Descrição"
       formControlName="description"
-      [control]="form.get('description')"
+      [control]="form.controls['description']"
       type="textarea"
     ></app-form-field>
 
@@ -30,4 +29,7 @@
       <button type="submit" mat-flat-button [disabled]="form.invalid" class="btn-create">Criar</button>
     </section>
   </form>
+  <div *ngIf="isLoading" class="d-flex-center">
+    <mat-spinner></mat-spinner>
+  </div>
 </mat-card>

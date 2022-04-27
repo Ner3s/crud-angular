@@ -12,6 +12,7 @@ import { ModalConfirmComponent } from 'src/app/shared/components/modal-confirm/m
   styleUrls: ['./product-create.component.scss'],
 })
 export class ProductCreateComponent implements OnInit {
+  isLoading = false;
   form: FormGroup = this.formBuilder.group({
     name: [null, [Validators.required]],
     description: [null, [Validators.required, Validators.minLength(3)]],
@@ -26,11 +27,10 @@ export class ProductCreateComponent implements OnInit {
     private dialog: MatDialog
   ) {}
 
-  ngOnInit(): void {
-    console.log(this.form.controls['name'].errors);
-  }
+  ngOnInit(): void {}
 
   onSubmit(): void {
+    this.isLoading = true;
     const formSubmitSubscribe = {
       next: () => {
         this.commonService.showMessage('Produto criado com sucesso.');
@@ -48,8 +48,10 @@ export class ProductCreateComponent implements OnInit {
             },
           },
         });
+        this.isLoading = false;
       },
       error: () => {
+        this.isLoading = false;
         this.commonService.showMessage('Não foi possível criar produto.');
       },
     };

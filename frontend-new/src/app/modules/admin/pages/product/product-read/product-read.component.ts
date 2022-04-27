@@ -1,6 +1,6 @@
 import { CommonService } from 'src/app/core/services/common/common.service';
 import {
-  Product,
+  IProduct,
   TProductParams,
 } from './../../../../../shared/models/product.model';
 import { Component, OnInit } from '@angular/core';
@@ -26,7 +26,7 @@ export class ProductReadComponent implements OnInit {
     'price',
     'actions',
   ];
-  products: Product[] = [];
+  products: IProduct[] = [];
   isLoading = false;
 
   constructor(
@@ -44,7 +44,7 @@ export class ProductReadComponent implements OnInit {
     this.isLoading = true;
 
     const subsParams = {
-      next: (response: Product[]) => {
+      next: (response: IProduct[]) => {
         this.products = response;
       },
       error: (err: Error) => {

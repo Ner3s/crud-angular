@@ -1,6 +1,6 @@
 import { TCommonParams } from "./common.model";
 
-export interface Product {
+export interface IProduct {
   id?: number;
   name: string;
   description: string;
