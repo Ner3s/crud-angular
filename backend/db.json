@@ -44,15 +44,21 @@
     },
     {
       "id": 8,
-      "name": "Notebook Accer",
-      "description": "Computador",
+      "name": "Accer Nitro",
+      "description": "Notebook Gamer 16GB 256GB 144Hz GTX 1660 6GB",
       "price": 2500
     },
     {
       "id": 9,
-      "name": "Celta 4 portas",
-      "description": "Carro",
+      "name": "Celta",
+      "description": "Carro 4 portas.",
       "price": 2500
+    },
+    {
+      "name": "Boneco do Mário",
+      "description": "Action Figure do Mario.",
+      "price": "150",
+      "id": 11
     }
   ]
 }
