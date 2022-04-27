@@ -1,0 +1,12 @@
+<label class="formField-outline">
+  <input
+  [type]="type"
+  [id]="id"
+  [name]="name"
+  [placeholder]="placeholder"
+  [readonly]="!!isReadOnly"
+  [(ngModel)]="value"
+  />
+  <span>{{label}}</span>
+</label>
+<app-form-error-msg [label]="label ? label : 'Este campo'" [control]="control"></app-form-error-msg>

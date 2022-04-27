@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.center {
+  text-align: center;
+}
+
+.d-center{
+  display: flex;
+  justify-content: center;
+
+  .btn-red {
+    background-color: red;
+    color: #fff;
+  }
+
+  .btn-blue {
+    background-color: $primary;
+    color: #fff;
+  }
+}
