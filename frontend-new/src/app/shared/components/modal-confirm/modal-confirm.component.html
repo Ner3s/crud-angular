@@ -1,8 +1,0 @@
-<h1 mat-dialog-title class="center">{{data?.title ?? 'Title'}}</h1>
-<section>
-  <p>{{data?.description ?? 'Description'}}</p>
-  <mat-dialog-actions class="d-center">
-    <button mat-flat-button [mat-dialog-close]="true" class="btn-red" [ngClass]="{'btn-blue': data.apperanceButtonConfirm === 'blue'}" (click)="data.handleSubmit()">Confirmar</button>
-    <button mat-flat-button mat-dialog-close cdkFocusInitial class="cancel" (click)="data?.handleClose()">Cancelar</button>
-  </mat-dialog-actions>
-</section>
