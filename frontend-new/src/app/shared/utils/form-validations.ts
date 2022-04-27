@@ -42,8 +42,6 @@ export class FormValidations {
       'email': `e-mail inválido`,
     }
 
-    console.log(config[validatorName]);
-
     return config[validatorName];
   }
 }

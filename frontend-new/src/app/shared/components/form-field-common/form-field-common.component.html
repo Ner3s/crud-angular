@@ -1,4 +1,4 @@
-<ng-container >
+<label class="formField-outline">
   <input
   [type]="type"
   [id]="id"
@@ -7,5 +7,6 @@
   [readonly]="!!isReadOnly"
   [(ngModel)]="value"
   />
-  <app-form-error-msg [label]="label ? label : 'Este campo'" [control]="control"></app-form-error-msg>
-</ng-container>
+  <span>{{label}}</span>
+</label>
+<app-form-error-msg [label]="label ? label : 'Este campo'" [control]="control"></app-form-error-msg>

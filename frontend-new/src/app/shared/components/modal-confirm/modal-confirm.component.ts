@@ -4,6 +4,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 export interface IModalConfirmData {
   title: string;
   description: string;
+  apperanceButtonConfirm?: 'blue' | 'red';
   handleSubmit: () => void;
   handleClose?: () => void;
 }

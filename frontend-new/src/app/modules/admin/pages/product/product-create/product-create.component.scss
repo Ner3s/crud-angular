@@ -8,3 +8,25 @@ h2 {
 hr {
   border: 1px solid $primary;
 }
+
+.form {
+  margin: 2.4rem 0;
+}
+
+.btn-back {
+  color: $primary;
+}
+
+.btn-create {
+  color: #fff;
+  background-color: $primary;
+}
+
+section {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    width: 10rem;
+  }
+}
