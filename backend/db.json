@@ -1,22 +1,10 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Celular",
-      "description": "Teste",
-      "price": 3000
-    },
-    {
       "id": 2,
       "name": "Notebook Mac Pro",
       "description": "MacBook Pro 256GB 8GB i5",
-      "price": 9000
-    },
-    {
-      "id": 3,
-      "name": "Iphone X",
-      "description": "Celular",
-      "price": 9000
+      "price": "12300"
     },
     {
       "id": 4,
@@ -59,6 +47,18 @@
       "description": "Action Figure do Mario.",
       "price": "150",
       "id": 11
+    },
+    {
+      "id": 12,
+      "name": "PRODUTO 2",
+      "description": "PRODUCT",
+      "price": "10"
+    },
+    {
+      "name": "test",
+      "description": "123123",
+      "price": "12312",
+      "id": 13
     }
   ]
 }
