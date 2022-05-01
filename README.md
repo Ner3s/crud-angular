@@ -5,7 +5,7 @@
 •<a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-ferramentas">Ferramentas</a> •
  <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-visualização">Como executar</a> • 
+ <a href="#-visualização">Visualização</a> • 
 </p>
 
 ---
